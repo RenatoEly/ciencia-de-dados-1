@@ -27,7 +27,7 @@ O que causa atração à primeira vista? E como isso varia para diferentes sexos
 - sports, tvsports, exercise, dining, museums, art, hiking, gaming, clubbing, reading, tv, theater, movies, concerts, music, shopping, yoga : De 1 a 10, quão interessado p1 é em cada uma dessas atividades.  
 - attr : quão atraente p1 achou p2
 - sinc : quão sincero p1 achou p2
-- intel : quão inteligente p1 achou p2    
+- intel : quão inteligente p1 achou p2
 - fun : quão divertido p1 achou p2
 - amb : quão ambicioso p1 achou p2
 - shar : quanto p1 achou que compartilha interesses e hobbies com p2
