@@ -18,12 +18,14 @@ theme_set(theme_bw())
 
 ```{r}
 sp_dating2 <- read_csv("speed-dating/speed-dating2.csv")
-sp_dating2 <- sp_dating2 %>% select('iid','pid','int_corr','age','attr','fun','shar','intel','dec')
+sp_dating2 <- sp_dating2
 sp_dating1 <- sp_dating2
 
 sp_dating <- left_join(sp_dating1, sp_dating2, c('iid' = 'pid', 'pid' = 'iid'))
-sp_dating <- sp_dating %>% mutate(match = (dec.x = 'yes' & dec.y = 'yes'))
+sp_dating <- sp_dating %>% mutate(match = ((dec.x = 'yes') &  (dec.y = 'yes')))
+sp_dating$match <- ifelse((sp_dating$dec.x == "yes") & (sp_dating$dec.y == "yes"),"yes","no")
 
+write.csv2(sp_dating, "speed-dating/speed-dating3.csv", sep = ";")
 ```
 
 
